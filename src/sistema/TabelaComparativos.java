@@ -3,8 +3,8 @@ package sistema;
 import java.util.ArrayList;
 
 public class TabelaComparativos {
- 
-      public static void imprimirTabela(ArrayList<String[]> dados) {
+
+    public static void imprimirTabela(ArrayList<String[]> dados) {
         String formatoLinha = "| %-15s | %-12s | %-15s | %-10s |\n";
         String formatoSeparador = "+-----------------+--------------+-----------------+------------+\n";
 

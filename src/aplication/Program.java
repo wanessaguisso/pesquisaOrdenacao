@@ -9,6 +9,7 @@ import sistema.Bubblesort;
 import sistema.ControleArquivos;
 import sistema.HeapSort;
 import sistema.InsercaoDireta;
+import sistema.Quicksort;
 import sistema.SelecaoDireta;
 import sistema.Shellsort;
 import sistema.Shakesort;
@@ -142,7 +143,7 @@ public class Program {
 				break;
 
 			case 7:
-				System.out.println("QuickSort ainda não implementado.");
+				algoritimoQuicksort(controleArq, nome);
 				break;
 
 			default:
@@ -312,6 +313,33 @@ public class Program {
 		System.out.println("Tempo de execução do Shakesort: " + duracao + " ms");
 
 		adicionarNaTabela("Shakesort", shak.getComparacao(), shak.getMovimentacao(), duracao);
+	}
+
+	public static void algoritimoQuicksort(ControleArquivos controleArq, String nome) {
+		if (!verificarNomeArq(nome)) {
+			return;
+		}
+
+		Quicksort quick = new Quicksort();
+		Item[] nums = controleArq.lerArquivo(nome);
+
+		// Executa o Quicksort
+		long start = System.nanoTime();
+		quick.quicksort(nums);
+		long end = System.nanoTime();
+
+		System.out.println("Vetor ordenado (Quicksort):");
+		for (Item n : nums) {
+			System.out.println(n.getChave());
+		}
+
+		System.out.println("Número de Comparações: " + quick.getComparacao());
+		System.out.println("Número de Movimentações: " + quick.getMovimentacao());
+
+		double duracao = (end - start) / 1_000_000.0;
+		System.out.println("Tempo de execução do Quicksort: " + duracao + " ms");
+
+		adicionarNaTabela("Quicksort", quick.getComparacao(), quick.getMovimentacao(), duracao);
 	}
 
 	// -------------------------------------------------------------------- TABELA
