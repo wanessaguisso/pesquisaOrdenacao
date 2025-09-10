@@ -62,3 +62,11 @@ public class Quicksort {
         }
     }
 }
+
+
+
+<img width="580" height="450" alt="Captura de tela 2025-09-10 130744" src="https://github.com/user-attachments/assets/1080e391-d90c-4ae0-884a-9da3987c237c" />
+
+<img width="727" height="110" alt="Captura de tela 2025-09-10 134341" src="https://github.com/user-attachments/assets/94499591-c608-4d16-b9a1-1f79eb348e8d" />
+
+
