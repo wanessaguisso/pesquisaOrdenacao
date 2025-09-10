@@ -32,10 +32,12 @@ public class Quicksort {
                 i++;
                 this.comparacao++;
             }
+            this.comparacao++;
             while (this.vetor[j].getChave() > pivo) {
                 j--;
                 this.comparacao++;
             }
+            this.comparacao++;
             if (i <= j) {
                 temp = this.vetor[i];
                 this.vetor[i] = this.vetor[j];
@@ -45,9 +47,11 @@ public class Quicksort {
                 j--;
             }
         } while (i <= j);
+
         if (esq < j) {
             ordena(esq, j);
         }
+
         if (i < dir) {
             ordena(i, dir);
         }
